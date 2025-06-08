@@ -3,6 +3,53 @@ local Window = Library.CreateLib("Dem1 Hub", "RJTheme6")
 local Tab = Window:NewTab("Main")
 local Section = Tab:NewSection("Player")
 
+
+Section:NewToggle("InfJump", "Infinity jump", function(state)
+    if state then
+  _G.infinjump = not _G.infinjump
+
+if _G.infinJumpStarted == nil then
+	--Ensures this only runs once to save resources
+	_G.infinJumpStarted = true
+
+	--The actual infinite jump
+	local plr = game:GetService('Players').LocalPlayer
+	local m = plr:GetMouse()
+	m.KeyDown:connect(function(k)
+		if _G.infinjump then
+			if k:byte() == 32 then
+			humanoid = game:GetService'Players'.LocalPlayer.Character:FindFirstChildOfClass('Humanoid')
+			humanoid:ChangeState('Jumping')
+			wait()
+			humanoid:ChangeState('Seated')
+			end
+		end
+	end)
+end
+    else
+         _G.infinjump = not _G.infinjump
+
+if _G.infinJumpStarted == nil then
+	--Ensures this only runs once to save resources
+	_G.infinJumpStarted = false
+
+	--The actual infinite jump
+	local plr = game:GetService('Players').LocalPlayer
+	local m = plr:GetMouse()
+	m.KeyDown:connect(function(k)
+		if _G.infinjump then
+			if k:byte() == 32 then
+			humanoid = game:GetService'Players'.LocalPlayer.Character:FindFirstChildOfClass('Humanoid')
+			humanoid:ChangeState('Jumping')
+			wait()
+			humanoid:ChangeState('Seated')
+			end
+		end
+	end)
+end
+    end
+end)
+
 Section:NewToggle("Noclip", "Wallhack", function(state)
     if state then
         local char = game.Players.LocalPlayer.Character
