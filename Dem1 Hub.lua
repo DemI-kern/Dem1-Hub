@@ -43,14 +43,18 @@ end)
 Section:NewSlider("Jump Power", "Player Jump power", 500, 50, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
+
 local Tab = Window:NewTab("Misc")
 local Section2 = Tab:NewSection("Trolling")
 local Section = Tab:NewSection("Esp")
-local Tab = Window:NewTab("Credits")a
-local Section = Tab:NewSection("Creator-Demi(In TikTok)")
+local Tab = Window:NewTab("Credits")
+local Section = Tab:NewSection("Creator-Dem1")
 local Section = Tab:NewSection("Helper-Timimir")
 
 Section2:NewButton("FlingGui", "Fling gui", function()
 
 _G.JXYSERR_MOBILE_TOGGLE_BUTTON = true; 
 loadstring(game:HttpGet("https://paste.ee/r/NTtmf", true))()
+
+
+end)
