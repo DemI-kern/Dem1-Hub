@@ -4,7 +4,7 @@ local Tab = Window:NewTab("Main")
 local Section = Tab:NewSection("Player")
 
 
-Section:NewToggle("InfJump", "Infinity jump", function(state)
+Section:NewToggle("Jump Hack", "Infinity jump", function(state)
     if state then
   _G.infinjump = not _G.infinjump
 
