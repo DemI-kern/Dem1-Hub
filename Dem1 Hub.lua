@@ -97,14 +97,16 @@ local Section = Tab:NewSection("Esp")
 Section:NewButton("ESP", "Esp all players", function()
    loadstring(game:HttpGet('https://raw.githubusercontent.com/Lucasfin000/SpaceHub/main/UESP'))()
 end)
-local Tab = Window:NewTab("Credits")
-local Section = Tab:NewSection("Creator-Dem1")
-local Section = Tab:NewSection("Helper-Timimir")
+local Tab2 = Window:NewTab("Script hubs")
+local SectionScript = Tab2:NewSection("!ALL SCRIPTS ARE MINE!")
+SectionScript:NewButton("Tower FL", "Script for tower FL", function()
+    print(ji)
+    end)
+local Tab4 = Window:NewTab("Credits")
+local Section = Tab4:NewSection("Creator-Dem1")
+local Section = Tab4:NewSection("Helper-Timimir")
 
 Section2:NewButton("FlingGui", "Fling gui", function()
-
 _G.JXYSERR_MOBILE_TOGGLE_BUTTON = true; 
 loadstring(game:HttpGet("https://paste.ee/r/NTtmf", true))()
-
-
 end)
